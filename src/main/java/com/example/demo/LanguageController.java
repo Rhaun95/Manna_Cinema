@@ -20,31 +20,32 @@ public class LanguageController {
     @Autowired
     private LanguageMapper lanMapper;
 
-    @PostMapping("insert")
-    public Language post(@RequestBody Language language) {
-        lanMapper.insert(language);
-        return language;
-    }
-
-    @GetMapping("list")
+    @GetMapping("list") // 전체 조회
     public List<Language> getAll() {
         return lanMapper.getAll();
     }
 
     @GetMapping("/{id}")
     public Language getById(@PathVariable("id") int id) {
-        return lanMapper.getById(id);
+        return lanMapper.getId(id);
+    }
+
+    @PostMapping("insert") // 추가
+    public Language post(@RequestBody Language language) {
+        lanMapper.insertTest(language);
+        return language;
     }
 
     @DeleteMapping("/{id}")
     public String delete(@PathVariable("id") int id) {
-        lanMapper.deleteId(id);
+        lanMapper.deleteTest(id);
         return id + "번 제품이 삭제되었습니다";
     }
 
     @PostMapping("/{id}")
     public String update(@PathVariable("id") int id, @RequestBody Language language) {
-        lanMapper.update(id,language);
-        return id + "번 제품  수정되었습니다." + LocalTime.now();
+        lanMapper.updateTest(id, language);
+        return id + "번 제품 수정되었습니다." + LocalTime.now();
     }
+
 }
