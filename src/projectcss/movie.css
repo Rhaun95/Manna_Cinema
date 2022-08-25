@@ -1,0 +1,25 @@
+.temp{
+  height: 200vh;
+}
+.nonedeco { 
+  text-decoration-line: 'none';
+}
+
+.sht{
+  max-width: calc(100% - 38px);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box; 
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+
+}
+.posterBox{
+  height : 50vh;
+  width: 35vh;
+}
+
+.stillBox{
+  height: 30vh;
+  width: 30vh;
+}
