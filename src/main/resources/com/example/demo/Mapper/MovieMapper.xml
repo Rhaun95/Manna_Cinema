@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.demo.Mapper.MovieMapper">
+
+    <select id="getAllMovie"  resultType = "map">
+        SELECT * FROM movie
+    </select>
+
+    <select id="getIdMovie" resultType="com.example.demo.VO.Movie">
+        Select * FROM movie WHERE movieId=#{id}
+    </select>
+
+    <select id="getStill1" resultType="string">
+        Select SUBSTRING_INDEX(stillUrl,",",1) FROM movie WHERE movieId=#{id}
+    </select>
+
+    <select id="getStill2" resultType="string">
+        Select SUBSTRING_INDEX(SUBSTRING_INDEX(stillUrl,",",2),',',-1) FROM movie WHERE movieId=#{id}
+    </select>
+
+    <select id="getStill3" resultType="string">
+        Select SUBSTRING_INDEX(SUBSTRING_INDEX(stillUrl,",",3),',',-1) FROM movie WHERE movieId=#{id}
+    </select>
+
+    <insert id = "insertMovie">
+        INSERT INTO movie(title,directorNm,actorNm,genre,runtime,repRlsDate,rating,posterUrl,plot,star,audiAcc,stillUrl,country,audioUrl)
+            VALUES (#{movie.title},#{movie.directorNm},#{movie.actorNm},#{movie.genre},#{movie.runtime},#{movie.repRlsDate},#{movie.rating},#{movie.posterUrl},
+            #{movie.plot},#{movie.star},#{movie.audiAcc},#{movie.stillUrl},#{movie.country},#{movie.audioUrl})
+    </insert>
+
+    <delete id = "deleteMovie">
+        DELETE FROM movie WHERE movieId = #{id}
+    </delete>
+
+    <update id = "updateMovie">
+        UPDATE movie SET
+            title=#{movie.title},
+            directorNm=#{movie.directorNm},
+            actorNm=#{movie.actorNm},
+            genre=#{movie.genre},
+            runtime=#{movie.runtime},
+            repRlsDate=#{movie.repRlsDate},
+            rating=#{movie.rating},
+            posterUrl=#{movie.posterUrl},
+            plot=#{movie.plot},
+            star=#{movie.star},
+            audiAcc=#{movie.audiAcc},
+            stillUrl=#{movie.stillUrl},
+            country=#{movie.country},
+            audioUrl=#{movie.audioUrl}
+            WHERE movieId=#{id}
+    </update>
+
+</mapper>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.demo.Mapper.StoreMapper">
+
+    <select id="getAllStore"  resultType = "map">
+        SELECT * FROM store
+    </select>
+
+    <select id="getIdStore" resultType="com.example.demo.VO.Store">
+        Select * FROM store WHERE id=#{id}
+    </select>
+
+    <insert id = "insertStore">
+        INSERT INTO store(price, amount, name, `type`, image)
+            VALUES (#{store.price},#{store.amount},#{store.name},#{store.type},#{store.image})
+    </insert>
+
+    <delete id = "deleteStore">
+        DELETE FROM store WHERE id = #{id}
+    </delete>
+
+    <update id = "updateMovie">
+        UPDATE store SET
+        price=#{store.price},
+        amount=#{store.amount},
+        name=#{store.name},
+        type=#{store.type},
+        image=#{store.image}
+        WHERE id=#{id}
+    </update>
+
+</mapper>
