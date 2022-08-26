@@ -1,51 +1,52 @@
-package com.example.demo;
+package com.example.demo.Controller;
 
 import java.time.LocalTime;
 import java.util.List;
 
+import com.example.demo.Service.LanguageService;
+import com.example.demo.VO.Language;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.DeleteMapping;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 
+@CrossOrigin
 @RestController
 @RequestMapping("/La")
 public class LanguageController {
 
     @Autowired
-    private LanguageMapper lanMapper;
+    private LanguageService languageService;
+
 
     @GetMapping("list") // 전체 조회
     public List<Language> getAll() {
-        return lanMapper.getAll();
+        return languageService.getAll();
     }
+
 
     @GetMapping("/{id}")
     public Language getById(@PathVariable("id") int id) {
-        return lanMapper.getId(id);
+        return languageService.getId(id);
     }
 
     @PostMapping("insert") // 추가
     public Language post(@RequestBody Language language) {
-        lanMapper.insertTest(language);
+        languageService.insert(language);
         return language;
     }
 
     @DeleteMapping("/{id}")
     public String delete(@PathVariable("id") int id) {
-        lanMapper.deleteTest(id);
+        languageService.delete(id);
         return id + "번 제품이 삭제되었습니다";
     }
 
-    @PostMapping("/{id}")
+    @PutMapping("/{id}")
     public String update(@PathVariable("id") int id, @RequestBody Language language) {
-        lanMapper.updateTest(id, language);
+        languageService.update(id, language);
         return id + "번 제품 수정되었습니다." + LocalTime.now();
     }
+
+
 
 }

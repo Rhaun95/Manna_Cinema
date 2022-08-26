@@ -2,10 +2,10 @@
 <!DOCTYPE mapper
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.example.demo.LanguageMapper">
+<mapper namespace="com.example.demo.Mapper.LanguageMapper">
 
 
-    <resultMap id="languageMap" type = "com.example.demo.Language">
+    <resultMap id="languageMap" type = "com.example.demo.VO.Language">
         <result property="id" column ="language_id"/>
     </resultMap>
 
@@ -13,7 +13,7 @@
         SELECT * FROM language
     </select>
 
-    <select id="getId" resultMap="languageMap" resultType="com.example.demo.Language">
+    <select id="getId" resultMap="languageMap" resultType="com.example.demo.VO.Language">
         Select * FROM language WHERE language_id=#{id}
     </select>
 
