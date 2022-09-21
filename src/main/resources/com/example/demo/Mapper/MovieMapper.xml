@@ -26,8 +26,8 @@
 
     <insert id = "insertMovie">
         INSERT INTO movie(title,directorNm,actorNm,genre,runtime,repRlsDate,rating,posterUrl,plot,star,audiAcc,stillUrl,country,audioUrl)
-            VALUES (#{movie.title},#{movie.directorNm},#{movie.actorNm},#{movie.genre},#{movie.runtime},#{movie.repRlsDate},#{movie.rating},#{movie.posterUrl},
-            #{movie.plot},#{movie.star},#{movie.audiAcc},#{movie.stillUrl},#{movie.country},#{movie.audioUrl})
+        VALUES (#{movie.title},#{movie.directorNm},#{movie.actorNm},#{movie.genre},#{movie.runtime},#{movie.repRlsDate},#{movie.rating},#{movie.posterUrl},
+                #{movie.plot},#{movie.star},#{movie.audiAcc},#{movie.stillUrl},#{movie.country},#{movie.audioUrl})
     </insert>
 
     <delete id = "deleteMovie">
@@ -36,21 +36,26 @@
 
     <update id = "updateMovie">
         UPDATE movie SET
-            title=#{movie.title},
-            directorNm=#{movie.directorNm},
-            actorNm=#{movie.actorNm},
-            genre=#{movie.genre},
-            runtime=#{movie.runtime},
-            repRlsDate=#{movie.repRlsDate},
-            rating=#{movie.rating},
-            posterUrl=#{movie.posterUrl},
-            plot=#{movie.plot},
-            star=#{movie.star},
-            audiAcc=#{movie.audiAcc},
-            stillUrl=#{movie.stillUrl},
-            country=#{movie.country},
-            audioUrl=#{movie.audioUrl}
-            WHERE movieId=#{id}
+                         title=#{movie.title},
+                         directorNm=#{movie.directorNm},
+                         actorNm=#{movie.actorNm},
+                         genre=#{movie.genre},
+                         runtime=#{movie.runtime},
+                         repRlsDate=#{movie.repRlsDate},
+                         rating=#{movie.rating},
+                         posterUrl=#{movie.posterUrl},
+                         plot=#{movie.plot},
+                         star=#{movie.star},
+                         audiAcc=#{movie.audiAcc},
+                         stillUrl=#{movie.stillUrl},
+                         country=#{movie.country},
+                         audioUrl=#{movie.audioUrl}
+        WHERE movieId=#{id}
     </update>
+
+    <select id="searchMovie"  resultType="map">
+        SELECT * FROM movie where (title like #{searchData}) or (actorNm like #{searchData}) or (directorNm like #{searchData}) or (plot like #{searchData}) or (genre like #{searchData})
+    </select>
+
 
 </mapper>

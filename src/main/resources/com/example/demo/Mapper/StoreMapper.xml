@@ -21,7 +21,7 @@
         DELETE FROM store WHERE id = #{id}
     </delete>
 
-    <update id = "updateMovie">
+    <update id = "updateStore">
         UPDATE store SET
         price=#{store.price},
         amount=#{store.amount},
@@ -30,5 +30,9 @@
         image=#{store.image}
         WHERE id=#{id}
     </update>
+
+    <select id="searchStore"  resultType="map">
+        SELECT * FROM store where (price like #{searchData}) or (name like #{searchData}) or (type like #{searchData});
+    </select>
 
 </mapper>

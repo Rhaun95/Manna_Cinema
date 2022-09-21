@@ -14,7 +14,7 @@
 
     <insert id = "insertCinema">
         INSERT INTO cinema(cinema_name, total_seat,lat,lng,star)
-            VALUES (#{cinema.cinema_name},#{cinema.total_seat},#{cinema.lat},#{cinema.lng},#{cinema.star})
+        VALUES (#{cinema.cinema_name},#{cinema.total_seat},#{cinema.lat},#{cinema.lng},#{cinema.star})
     </insert>
 
     <delete id = "deleteCinema">
@@ -23,12 +23,16 @@
 
     <update id = "updateCinema">
         UPDATE cinema SET
-        cinema_name=#{cinema.cinema_name},
-        total_seat=#{cinema.total_seat},
-        lat=#{cinema.lat},
-        lng=#{cinema.lng},
-        star=#{cinema.star}
+                          cinema_name=#{cinema.cinema_name},
+                          total_seat=#{cinema.total_seat},
+                          lat=#{cinema.lat},
+                          lng=#{cinema.lng},
+                          star=#{cinema.star}
         WHERE id=#{id}
     </update>
+
+    <select id="searchCinema"  resultType="map">
+        SELECT * FROM cinema where cinema_name like #{searchData}
+    </select>
 
 </mapper>

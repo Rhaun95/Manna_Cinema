@@ -3,9 +3,7 @@ package com.example.demo.Controller;
 import java.time.LocalTime;
 import java.util.List;
 
-import com.example.demo.Service.LanguageService;
 import com.example.demo.Service.MovieService;
-import com.example.demo.VO.Language;
 import com.example.demo.VO.Movie;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -21,12 +19,14 @@ public class MovieController {
 
 
     @GetMapping("") // 전체 조회
+
     public List<Movie> getAll() {
         return movieService.getAll();
     }
 
 
     @GetMapping("/{id}")
+//    @PreAuthorize("hasAnyRole('ROLE_USER')")
     public Movie getById(@PathVariable("id") int id) {
         return movieService.getId(id);
     }
@@ -36,6 +36,12 @@ public class MovieController {
         movieService.insert(movie);
         return movie;
     }
+    @PostMapping("search")//검색
+    public List<Movie> searchMovie(@RequestBody String searchData) {
+        return movieService.searchMovie("%" + searchData + "%");
+    }
+
+
 
     @DeleteMapping("/{id}")
     public String delete(@PathVariable("id") int id) {
@@ -48,7 +54,6 @@ public class MovieController {
         movieService.update(id, movie);
         return id + "번 제품 수정되었습니다." + LocalTime.now();
     }
-
 
     @GetMapping("/{id}/still1")
     public String getStill1(@PathVariable("id") int id){

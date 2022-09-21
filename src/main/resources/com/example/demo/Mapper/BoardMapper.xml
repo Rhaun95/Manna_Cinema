@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.demo.Mapper.BoardMapper">
+
+    <resultMap id="boardMap" type="com.example.demo.VO.Board">
+        <result property="id" column="id"/>
+    </resultMap>
+
+
+    <select id="getAll" resultMap="boardMap" resultType="map">
+        SELECT *
+        FROM board
+        order by id asc
+    </select>
+
+    <select id="getById" resultMap="boardMap" resultType="com.example.demo.VO.Board">
+        select * from(SELECT
+                          id,
+                          user_id,
+                          title,
+                          content,
+                          regDate,
+                          hit,
+                          type,
+                          LEAD(id,1,9999) OVER(ORDER BY id) AS next,
+                          LAG(id,1,9999) OVER(ORDER BY id) AS prev,
+                          LEAD(TITLE,1,'다음글이 없습니다.') OVER(ORDER BY id) AS nextTitle,
+                          LAG(TITLE,1,'이전글이 없습니다.') OVER(ORDER BY id) AS prevTitle
+
+                      FROM board
+                      order by id DESC) as b
+        WHERE id = #{id}
+    </select>
+
+<!--이전글 , 다음글 조회    /-->
+<!--    <select id="movePage" parameterType="int" resultType="com.example.demo.VO.Board">
+        select * from(SELECT
+                          id,
+                          LEAD(id,1,9999) OVER(ORDER BY id) AS next,
+                          LAG(id,1,9999) OVER(ORDER BY id) AS prev,
+                          TITLE,
+                          LEAD(TITLE,1,9999) OVER(ORDER BY id) AS nextTitle,
+                          LAG(TITLE,1,9999) OVER(ORDER BY id) AS prevTitle
+
+                      FROM board
+                      order by id DESC) as b
+        WHERE id = #{id}
+    </select>-->
+
+
+
+
+    <insert id="insert">
+        INSERT INTO board(user_id, title, content,type,regDate)
+        VALUES (#{board.user_id}, #{board.title}, #{board.content},#{board.type}, #{board.regDate})
+    </insert>
+
+
+    <delete id="delete">
+        Delete
+        from board
+        WHERE id = #{id}
+    </delete>
+
+
+    <update id="update">
+        UPDATE board
+        SET user_id=#{board.user_id},
+            title=#{board.title},
+            content=#{board.content},
+            hit=#{board.hit},
+            regDate=#{board.regDate}
+        WHERE id = #{id}
+    </update>
+
+
+    <update id="addHit">
+        update board
+        set hit = #{board.hit} + 1
+        WHERE id = #{board.id};
+    </update>
+
+</mapper>

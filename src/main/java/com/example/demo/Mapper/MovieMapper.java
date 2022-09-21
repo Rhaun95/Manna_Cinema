@@ -10,6 +10,7 @@ import org.apache.ibatis.annotations.Param;
 @Mapper
 public interface MovieMapper {
 
+    List<Movie> searchMovie(@Param("searchData") String searchData);
     List<Movie> getAllMovie();//전체조회
 
     Movie getIdMovie(@Param("id") int id);//id별 조회

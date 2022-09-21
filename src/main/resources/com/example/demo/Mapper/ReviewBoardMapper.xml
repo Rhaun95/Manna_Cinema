@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.demo.Mapper.ReviewBoardMapper">
+
+    <resultMap id="reviewBoardMap" type="com.example.demo.VO.ReviewBoard">
+        <result property="id" column="id"/>
+    </resultMap>
+
+    <select id="getAll" resultMap="reviewBoardMap" resultType="map">
+        SELECT *
+        FROM community
+        order by type asc;
+    </select>
+
+    <select id="getById" resultMap="reviewBoardMap" resultType="com.example.demo.VO.ReviewBoard">
+        SELECT * from(SELECT
+                    id,
+                    user_id,
+                    title,
+                    content,
+                    regDate,
+                    hit,
+                    type,
+                    url,
+                    cinema_name,
+                    star,
+                    cinema_image,
+                    LEAD(id,1,9999) OVER(ORDER BY id) AS next,
+                          LAG(id,1,9999) OVER(ORDER BY id) AS prev,
+                          LEAD(TITLE,1,'다음글이 없습니다.') OVER(ORDER BY id) AS nextTitle,
+                          LAG(TITLE,1,'이전글이 없습니다.') OVER(ORDER BY id) AS prevTitle
+
+                      FROM community
+                      order by id DESC) as c
+        WHERE id = #{id}
+    </select>
+
+
+</mapper>
