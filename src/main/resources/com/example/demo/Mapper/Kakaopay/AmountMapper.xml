@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.demo.Mapper.Kakaopay.AmountMapper">
+
+    <resultMap id="readyMap" type="com.example.demo.VO.Kakaopay.AmountVO">
+        <result property="total" column="total"></result>
+    </resultMap>
+
+    <select id="selectAmount">
+        select * from pay_amount_Info where tid=#{tid};
+    </select>
+
+    <!--    <insert id = "insertAmount">-->
+    <!--        INSERT INTO pay_Amount_Info (tid, total, tax_free,vat, point,discount )-->
+    <!--        VALUES (#{tid} ,#{amount.total}, #{amount.tax_free},#{amount.vat}, #{amount.point},#{amount.discount} );-->
+    <!--    </insert>-->
+
+
+</mapper>

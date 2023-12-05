@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.demo.Mapper.SeatMapper">
+
+    <select id="getAllSeats"  resultType = "map">
+        SELECT * FROM seatdb
+    </select>
+
+    <!--    <select id="getIdStore" resultType="com.example.demo.Store.VO.Store">-->
+    <!--        Select * FROM Seat WHERE id=#{id}-->
+    <!--    </select>-->
+
+    <!--    <insert id = "insertItemBasket">-->
+    <!--        INSERT INTO item_basket(user_id,item_name,total_price, total_amount, item_image)-->
+    <!--        VALUES (#{item_basket.user_id},#{item_basket.item_name},#{item_basket.total_price},#{item_basket.total_amount},#{item_basket.item_image})-->
+    <!--    </insert>-->
+
+    <!--    <delete id = "deleteItemBasket">-->
+    <!--        DELETE FROM item_basket WHERE id = #{id}-->
+    <!--    </delete>-->
+    <!--   선택됬을 때 0이면 1로 바뀜(예약됨) -->
+    <update id = "updateStatus">
+        UPDATE seatdb
+        SET booked = CASE WHEN booked=0 THEN 1 ELSE 0 END
+        WHERE id=#{id}
+    </update>
+
+</mapper>

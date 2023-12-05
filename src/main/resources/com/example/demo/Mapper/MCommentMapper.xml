@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.demo.Mapper.MCommentMapper">
+
+    <resultMap id="mCommentMap" type="com.example.demo.VO.MComment">
+        <result property="id" column="id"/>
+    </resultMap>
+
+    <select id="getAll" resultMap="mCommentMap" resultType="map">
+        SELECT *
+        FROM mcomment
+
+    </select>
+
+    <select id="getById" resultMap="mCommentMap" resultType="com.example.demo.VO.MComment">
+        Select *
+        FROM mcomment
+        WHERE id = #{id}
+    </select>
+
+    <delete id = "deleteMComment">
+        DELETE FROM mcomment WHERE id = #{id}
+    </delete>
+
+</mapper>

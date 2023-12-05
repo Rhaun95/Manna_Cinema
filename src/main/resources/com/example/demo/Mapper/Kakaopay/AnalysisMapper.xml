@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.demo.Mapper.Kakaopay.AnalysisMapper">
+
+    <resultMap id="AnalysisMap" type="com.example.demo.VO.Kakaopay.AnalysisDTO">
+        <result property="total_amount " column="total_amount"></result>
+    </resultMap>
+
+
+    <select id="getAll" resultType="com.example.demo.VO.Kakaopay.AnalysisDTO">
+        select total_amount, approved_at, canceled_at from pay_approve order by approved_at asc;
+    </select>
+</mapper>

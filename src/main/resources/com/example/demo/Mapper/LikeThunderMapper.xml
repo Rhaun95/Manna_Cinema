@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.demo.Mapper.LikeThunderMapper">
+
+
+    <select id="check" resultType="com.example.demo.VO.LikeThunder">
+        Select * FROM likethunder WHERE username = #{username} AND posting_num= #{posting_num}
+    </select>
+
+    <select id="getAll" resultType="map">
+        Select * FROM likethunder WHERE username = #{username}
+    </select>
+
+    <insert id = "insertLike">
+        INSERT INTO likethunder(username, posting_num)
+            VALUES (#{likeThunder.username},#{likeThunder.posting_num})
+    </insert>
+
+    <delete id = "deleteLike">
+        DELETE FROM likethunder WHERE username = #{username} AND posting_num= #{posting_num}
+    </delete>
+
+</mapper>

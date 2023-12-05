@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.demo.Mapper.ThunderMapper">
+
+    <select id="getAll"  resultType = "map">
+        SELECT * FROM thunder order by regdate desc
+    </select>
+
+    <select id="getById" resultType="com.example.demo.VO.Thunder">
+        Select * FROM thunder WHERE id=#{id} order by regdate desc
+    </select>
+    <select id="getByLocation" resultType="map">
+        Select * FROM thunder WHERE location=#{loc} order by regdate desc
+    </select>
+
+    <select id="getByUsername" resultType="map">
+        Select * FROM thunder WHERE username=#{username} order by regdate desc
+    </select>
+
+    <select id="getWanted" resultType="map">
+        Select * FROM thunder WHERE username=#{username} and location=#{location} order by regdate desc
+    </select>
+
+    <select id="getHot" resultType="map">
+        Select * from thunder order by likes desc limit 4
+    </select>
+
+
+
+
+
+
+    <select id="getByAll" resultType="map">
+        Select * FROM thunder
+            WHERE
+
+            <if test ="#{location} != null">
+                AND location = #{loc}
+            </if>
+            <if test ="#{username} != null">
+                AND username = #{username}
+            </if>
+    </select>
+
+
+    <insert id = "insertThunder">
+        INSERT INTO thunder(username, title, content, image, lat, lng, openlink, location, tags, address, meetingtime)
+            VALUES (#{thunder.username},#{thunder.title},#{thunder.content},#{thunder.image},
+                    #{thunder.lat},#{thunder.lng},#{thunder.openlink},#{thunder.location},#{thunder.tags},
+                    #{thunder.address},#{thunder.meetingtime})
+    </insert>
+
+    <delete id = "deleteThunder">
+        DELETE FROM thunder WHERE id = #{id}
+    </delete>
+
+    <update id = "updateThunder">
+        UPDATE thunder SET
+           title=#{thunder.title},
+           category=#{thunder.category},
+           content=#{thunder.content},
+           image=#{thunder.image},
+           lat=#{thunder.lat}
+           lat=#{thunder.lat}
+           lng=#{thunder.lng}
+           openlink=#{thunder.openlink}
+        WHERE id=#{id}
+    </update>
+
+<!--    <select id="searchThunder"  resultType="map">-->
+<!--        SELECT * FROM thunder where (price like #{searchData}) or (name like #{searchData}) or (type like #{searchData});-->
+<!--    </select>-->
+
+</mapper>

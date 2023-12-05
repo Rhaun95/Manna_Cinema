@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.demo.Mapper.LikeCommentMapper">
+
+
+    <select id="check" resultType="com.example.demo.VO.LikeComment">
+        Select * FROM likecomment WHERE UID = #{uid} AND CID= #{cid}
+    </select>
+
+    <insert id = "insertLike">
+        INSERT INTO likecomment(UID, CID)
+        VALUES (#{likeComment.UID},#{likeComment.CID})
+    </insert>
+
+    <delete id = "deleteLike">
+        DELETE FROM likecomment WHERE UID = #{uid} AND CID= #{cid}
+    </delete>
+
+</mapper>

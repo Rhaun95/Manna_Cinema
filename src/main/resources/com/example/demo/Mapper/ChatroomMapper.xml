@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.demo.Mapper.ChatroomMapper">
+
+    <select id="getAll"  resultType = "map">
+        SELECT * FROM chatroom
+    </select>
+
+    <select id="getById" resultType="com.example.demo.VO.Chatroom">
+        Select * FROM chatroom WHERE post_id = #{postId}
+    </select>
+
+
+    <insert id = "insert">
+        INSERT INTO chatroom(post_id,username)
+            VALUES (#{chatroom.post_id},#{chatroom.username})
+    </insert>
+
+
+
+</mapper>

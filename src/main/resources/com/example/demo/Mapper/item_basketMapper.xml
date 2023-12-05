@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.demo.Mapper.item_basketMapper">
+
+    <select id="getAllItems"  resultType = "map">
+        SELECT * FROM item_basket
+    </select>
+
+    <select id="getByUsername"  resultType = "map">
+        SELECT * FROM item_basket where user_id =#{username} and status =0
+    </select>
+
+    <!--    <select id="getIdStore" resultType="com.example.demo.Store.VO.Store">-->
+    <!--        Select * FROM Seat WHERE id=#{id}-->
+    <!--    </select>-->
+
+    <insert id = "insertItemBasket">
+        INSERT INTO item_basket(user_id,item_name,total_price, total_amount, item_image)
+        VALUES (#{item_basket.user_id},#{item_basket.item_name},#{item_basket.total_price},#{item_basket.total_amount},#{item_basket.item_image})
+    </insert>
+
+    <delete id = "deleteAll">
+        DELETE FROM item_basket
+    </delete>
+
+    <delete id = "deleteById">
+        DELETE FROM item_basket WHERE id = #{id}
+    </delete>
+
+    <update id = "updateStatus">
+        UPDATE item_basket SET
+            status = 1
+        WHERE id=#{id}
+    </update>
+
+</mapper>

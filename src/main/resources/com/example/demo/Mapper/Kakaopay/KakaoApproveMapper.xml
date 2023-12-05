@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.demo.Mapper.Kakaopay.KakaoApproveMapper">
+
+    <resultMap id="readyMap" type="com.example.demo.VO.Kakaopay.KakaoPayApproveVO">
+        <result property="tid" column="tid"></result>
+    </resultMap>
+
+    <insert id = "insertApprove">
+        INSERT INTO pay_approve (tid,
+                                 partner_order_id,
+                                 partner_user_id,
+                                 payment_method_type,
+                                 item_name,
+                                 total_amount,
+                                 quantity,
+                                 created_at,
+                                 approved_at,
+                                 canceled_at,
+                                 status)
+        VALUES ( #{tid},#{partner_order_id},#{partner_user_id},#{payment_method_type},#{item_name},#{total_amount},#{quantity},#{created_at},#{approved_at},#{canceled_at}, "결제완료");
+    </insert>
+
+    <insert id = "Approve">
+        INSERT INTO pay_approve (tid,
+                                 partner_order_id,
+                                 partner_user_id,
+                                 payment_method_type,
+                                 item_name,
+                                 total_amount,
+                                 quantity,
+                                 created_at,
+                                 approved_at,
+                                 canceled_at,
+                                 status,
+                                 basket_id)
+        VALUES ( #{tid},#{partner_order_id},#{partner_user_id},#{payment_method_type},#{item_name},#{total_amount},#{quantity},#{created_at},#{approved_at},#{canceled_at}, "결제완료",#{basket_id});
+    </insert>
+
+
+
+
+
+
+
+    <insert id = "insertAmount">
+        INSERT INTO pay_amount_Info (tid, total, tax_free,vat, point,discount )
+        VALUES (#{tid} ,#{amount.total}, #{amount.tax_free},#{amount.vat}, #{amount.point},#{amount.discount} );
+    </insert>
+
+    <insert id="insertCard">
+        INSERT INTO pay_card_Info (tid, issuer_corp, issuer_corp_code, bin, card_type, install_month,interest_free_install )
+        VALUES (#{tid},
+                #{card_info.issuer_corp},
+                #{card_info.issuer_corp_code},
+                #{card_info.bin},
+                #{card_info.card_type},
+                #{card_info.install_month},
+                #{card_info.interest_free_install});
+    </insert>
+
+    <select id="getTid" resultType="String">
+        select tid from pay_approve where partner_order_id = #{partner_order_id};
+    </select>
+
+    <select id = "getApproveInfo" resultType="com.example.demo.VO.Kakaopay.KakaoPayApproveVO">
+        select * from pay_approve where partner_order_id = #{partner_order_id};
+    </select>
+
+    <select id="getByBasketId" resultType="com.example.demo.VO.Kakaopay.KakaoPayApproveVO">
+        select * from pay_approve where basket_id = #{basket_id}
+
+    </select>
+
+    <select id="kakaoInfo" resultType="com.example.demo.VO.Kakaopay.KakaoPayApproveVO">
+        select partner_order_id,
+               partner_user_id,
+               payment_method_type,
+               item_name,
+               total_amount,
+               quantity,
+               approved_at
+
+        FROM pay_approve
+        WHERE tid = #{tid}
+        order by partner_order_id DESC;
+    </select>
+
+    <select id="getDetailsPayment" resultType="map">
+        select partner_order_id,
+               partner_user_id,
+               payment_method_type,
+               item_name,
+               status,
+               total_amount,
+               quantity,
+               approved_at,
+               tid
+        from pay_approve
+        where partner_user_id = #{partner_user_id}
+        order by partner_order_id DESC;
+    </select>
+
+    <select id="getAmount" resultType="String">
+        select total_amount from pay_approve where tid = #{tid};
+    </select>
+
+    <update id="updatePayment" >
+        update pay_approve set status = "결제취소", canceled_at = current_timestamp, approved_at = "CANCELED" where tid = #{tid};
+    </update>
+
+    <select id="getCancelInfo" resultType="com.example.demo.VO.Kakaopay.KakaoPayApproveVO">
+        select * from pay_approve where tid = #{tid};
+    </select>
+
+</mapper>

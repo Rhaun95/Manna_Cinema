@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.demo.Mapper.Movie_Basket_Mapper">
+
+    <select id="getAll"  resultType = "com.example.demo.VO.Movie_Basket">
+        SELECT * FROM movie_basket
+    </select>
+
+    <select id="getByUsername"  resultType = "com.example.demo.VO.Movie_Basket">
+        SELECT * FROM movie_basket where user_id=#{username} and status=0
+    </select>
+
+
+    <insert id = "addMVBasket">
+        INSERT INTO movie_basket(user_id,title,posterUrl,movie_time,reserveDate,cinema_name,cinema_id,seat_num,total_price,total_amount,mbti)VALUES(#{movie_basket.user_id},#{movie_basket.title},#{movie_basket.posterUrl},#{movie_basket.movie_time},#{movie_basket.reserveDate},#{movie_basket.cinema_name},#{movie_basket.cinema_id},#{movie_basket.seat_num},#{movie_basket.total_price},#{movie_basket.total_amount},#{movie_basket.mbti})
+    </insert>
+
+    <delete id = "deleteById">
+        DELETE FROM movie_basket WHERE id = #{id}
+    </delete>
+
+    <delete id = "deleteAll">
+        DELETE FROM movie_basket
+    </delete>
+
+    <update id = "updateStatus">
+        UPDATE movie_basket SET
+            status = 1
+        WHERE id=#{id}
+    </update>
+    <!-- 예매내역 전부-->
+    <select id="getAllBooking"  resultType = "com.example.demo.VO.Movie_Basket">
+        SELECT * FROM movie_basket
+        where user_id=#{user_id} and status=1
+
+    </select>
+
+    <!-- 예매내역 -->
+    <select id="getById"  resultType = "com.example.demo.VO.Movie_Basket">
+        SELECT * FROM movie_basket
+        where id=#{id}
+    </select>
+
+    <!--예매내역-->
+    <select id = "getBooked" resultType="com.example.demo.VO.Movie_Basket">
+        select * from movie_basket where user_id = #{user_id} order by reserveDate desc limit 1;
+    </select>
+
+</mapper>

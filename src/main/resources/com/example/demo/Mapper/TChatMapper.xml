@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.demo.Mapper.TChatMapper">
+
+    <select id="getAllTChat"  resultType = "map">
+        SELECT * FROM tchat;
+    </select>
+
+    <select id="getIdTChat" resultType="map">
+        Select * FROM tchat WHERE tchat_id=#{tchatid}
+    </select>
+
+    <insert id = "insertTChat">
+        INSERT INTO tchat(user_id,context,tchat_id,time)
+            VALUES (#{tchat.user_id},#{tchat.context},#{tchat.tchat_id},now())
+    </insert>
+
+    <delete id = "deleteTChat">
+        DELETE FROM tchat WHERE num = #{num}
+    </delete>
+
+
+<!--    <select id="searchTChat"  resultType="map">-->
+<!--        SELECT * FROM tchat where context like #{searchData}-->
+<!--    </select>-->
+
+</mapper>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.demo.Mapper.ThunderCommentMapper">
+
+    <resultMap id="commentMap" type="com.example.demo.VO.ThunderComment">
+        <result property="id" column="id"/>
+    </resultMap>
+
+    <select id="getAll" resultMap="commentMap" resultType="map">
+        SELECT *
+        FROM thunderComment
+
+    </select>
+
+    <select id="getByPostId" resultMap="commentMap" resultType="map">
+        Select *
+        FROM thunderComment
+        WHERE posting_num = #{posting_num}
+    </select>
+
+    <insert id="insert">
+        INSERT INTO thunderComment(user_id, content,posting_num)
+        VALUES ( #{comment.user_id}, #{comment.content},#{comment.posting_num})
+
+    </insert>
+    <delete id = "delete">
+        DELETE FROM thundercomment WHERE id = #{id}
+    </delete>
+
+    <update id="update">
+        Update thundercomment SET
+            content=#{thunderComment.content} where id=#{id}
+    </update>
+    <select id="getByUsername" resultType="map">
+        Select * FROM thunderComment WHERE user_id=#{username} or posting_num=#{username} order by regdate desc
+    </select>
+
+
+
+</mapper>

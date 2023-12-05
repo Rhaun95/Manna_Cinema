@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.demo.Mapper.UserMapper">
+
+    <select id="getAllUser" resultType="map">
+        SELECT * FROM USER;
+    </select>
+
+    <select id="getById" resultType="com.example.demo.entity.User2">
+        SELECT * FROM USER where username=#{id}
+    </select>
+
+    <!-- 개인정보 수정-->
+    <update id="updateUser" >
+        update user SET
+                        password=#{userModify.password},
+                        nickname=#{userModify.nickname},
+                        email=#{userModify.email},
+                        birth=#{userModify.birth},
+                        phone=#{userModify.birth}
+        where username=#{userModify.username}
+    </update>
+
+    <!-- 회원탈퇴 -->
+    <delete id="userListMapper">
+        DELETE FROM user WHERE username= #{username};
+    </delete>
+
+    <delete id="deleteAdminUser">
+        DELETE FROM user WHERE user_id= #{id};
+    </delete>
+
+</mapper>

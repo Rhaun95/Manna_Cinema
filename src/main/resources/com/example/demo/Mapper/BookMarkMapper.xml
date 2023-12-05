@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.demo.Mapper.BookMarkMapper">
+
+    <resultMap id="bookMarkMap" type="com.example.demo.VO.BookMark">
+        <result property="post_id" column="post_id"/>    <!--이거 원래 id 로 되어있었는데 다시 한 번 생각하기 -->
+    </resultMap>
+
+    <select id="getAll" resultMap="bookMarkMap" resultType="map">
+        SELECT *
+        FROM bookmark
+        order by post_id asc
+    </select>
+
+    <!--북마크-->
+    <!--    <select id="getAllById" resultMap="bookMarkMap" resultType="map">-->
+    <!--        select *-->
+    <!--        from bookmark left join community on community.id = bookmark.post_id;-->
+    <!--    </select>-->
+    <!--    <select id="getById" resultMap="bookMarkMap" resultType="com.example.demo.VO.BookMark">-->
+    <!--        select post_id from bookmark-->
+    <!--        where own_id = #{own_id}-->
+    <!--    </select>-->
+
+    <!--전체조회-->
+    <select id="getById" resultMap="bookMarkMap" resultType="com.example.demo.VO.BookMark">
+        select distinct * from bookmark
+        where own_id = #{own_id}
+    </select>
+
+    <insert id="insertMark">
+        INSERT IGNORE INTO bookmark(post_id, own_id,user_id,title,regDate,type,hit,cinema_name)
+        Values ( #{bookMark.post_id},#{bookMark.own_id},#{bookMark.user_id},#{bookMark.title},#{bookMark.regDate},#{bookMark.type},#{bookMark.hit},#{bookMark.cinema_name})
+    </insert>
+
+    <delete id=" deleteMark">
+        DELETE FROM bookmark WHERE post_id =#{.post_id}
+    </delete>
+
+    <!-- 필터기능-->
+    <select id = "filterReview" resultMap="bookMarkMap" resultType="map">
+        SELECT * FROM bookmark WHERE type = #{type}
+    </select>
+
+    <!--조회수 증가-->
+
+    <update id="addHit">
+        update bookmark
+        set hit = hit + 1
+        WHERE post_id = #{post_id};
+    </update>
+
+</mapper>
