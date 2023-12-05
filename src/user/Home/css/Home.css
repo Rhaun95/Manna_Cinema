@@ -1,0 +1,219 @@
+.home_main_all_container{
+ position: relative;
+  
+}
+
+.top_main_image{
+  position: absolute;
+  background: black;
+  opacity: 0.8;
+  height: 900px;
+  width: 100%;
+}
+
+.top_main_image1{
+  height: 900px;
+  /* height: fit-content; */
+  width: 100%;
+  /* background: url("../../../icons/home1.png"); */
+  background: url("https://i.ytimg.com/vi/mO5O7QINHvY/maxresdefault.jpg");
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: cover;
+  /* background-attachment: fixed; */
+}
+
+.top_main_content{
+  position: absolute;
+  width: 850px;
+  height: 300;
+  left: 12%;
+  top: 48%;
+  font-size: 50px;
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: 800;
+  color: rgb(235, 219, 198);
+  text-align: left;
+}
+
+
+.home_main_all_container2{
+  display: flex;
+  flex-direction: column;
+
+  
+}
+
+.main_movies_container{
+  display: flex;
+  flex-direction: column;
+  height: 800px;
+  width: 100%;
+  background: url("https://coolhdwall.com/storage/thumbnail/2201/fantastic-beasts-3-movie-poster-hd-wallpaper-x-preview-42.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+
+
+}
+
+        /* 어두운 전체 뒷배경 */
+.main_movies_back{
+  background: black;
+  opacity: 0.9;
+  height: 800px;
+  width: 100%;
+
+}
+
+.main_movies_content{
+  height: 800px;
+  width: 100%;
+  position: absolute;
+
+}
+
+/* 영화 슬라이드 */
+.main_movies_temp{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 1200px;
+ 
+}
+
+.main_movies_flex{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  width: 1100px;
+}
+
+/* 객체하나 크기 */
+.movie_in_container_forback{
+  width: 19.5rem; 
+  height:450px;
+  display: inline-block;
+  margin: 20px;
+  padding : 1em;
+  position: relative;
+  
+}
+.movie_in_container_forback:hover .home_movie-top-flush{
+  opacity: 0.3;
+  background-color: black;
+}
+.home_movie-top-flush{
+  position: absolute;
+
+}
+
+.home_movie_img{
+  width: 280px;
+  height: 360px;
+
+}
+
+
+/*상세정보 검은색 처리*/
+.home_movie-group-flush{
+  position:absolute;
+
+
+  height: 435px;
+  width: 300px;
+  
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transform: scale(0.9);
+  opacity: 0;
+}
+.movie_in_container_forback:hover .home_movie-group-flush{
+
+  opacity: 1.0;
+  background-color: black;
+  transform: scale(1.0);
+  transition: all 0.2s ease-out;
+  transform: translateY(-2%) translatex(-3.5%);
+}
+
+
+
+/* 번개 모임 */
+.home_thunder_container{
+  display: flex;
+  justify-content: center;
+  background-color: rgb(143, 229, 189);
+  height: 600px;
+  width: 100%;
+}
+
+.home_thunder_title{
+  font-size: 55px;
+  margin-top:40px;
+}
+
+
+/* Map  시작 */
+.home_map_container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: whitesmoke;
+  height: 800px;
+  width: 100%;
+
+}
+
+.home_map_item{
+  width: 1000px;
+  height: 600px;
+  display: flex;
+  justify-content: center;
+  border-radius: 10px; 
+  margin-top: 20px;
+  
+  border: 3px solid black;
+}
+
+.home_marker_content{
+  display:flex;
+  
+  width: 350px;
+  height: 120px;
+  
+  padding:10px;
+  color:black;
+}
+
+/* 고객센터 */
+.home_service_container{
+  display: flex;
+
+  flex-direction: column;
+  justify-content: center;
+  /* background-color: rgb(154, 214, 230); */
+  height: 400px;
+  width: 100%;
+  
+  background-color: whitesmoke;
+  color: rgb(105, 103, 103);
+}
+.home_service_title{
+  width: 100%;
+  height: 70px;
+  font-size: 50px;
+  background-color: rgb(154, 214, 230);
+}
+
+.home_service_content{
+  display: flex;
+  justify-content: space-around;
+  margin: 70px auto;
+
+  width:90%;
+  display:flex;
+}
+

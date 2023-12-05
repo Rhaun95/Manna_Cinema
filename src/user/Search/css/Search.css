@@ -1,0 +1,8 @@
+.searchBody{
+    backdrop-filter : blur(5px);
+    border : solid #282c34 5px;
+    overflow: auto;
+    height : 80vh;
+    width : 210vh;
+    z-index: -1;
+}

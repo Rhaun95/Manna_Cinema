@@ -1,0 +1,61 @@
+
+.comment_box{
+  display: flex;
+  align-items: center;
+
+  width: 1000px;
+ 
+  padding-bottom: 10px;
+  border-bottom: 1.5px solid rgba(155, 155, 155, 0.404);
+  margin-bottom: 15px;
+}
+.comment_content{
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+
+  margin: 0px 0 10px 20px;
+}
+
+
+/* img{
+  -webkit-filter: opacity(.5) drop-shadow(0 0 0 gray);
+  filter: opacity(.5) drop-shadow(0 0 0 gray)
+} */
+
+.comment_Co_Bo{
+  width: 870px;
+  display: flex;
+  justify-content: space-between;
+}
+.comment_Co_Bo :nth-child(2){
+  font-size: 14px;
+  color: rgba(73, 88, 80, 0.74);
+}
+.thunderCoIcon_box{
+  display: flex;
+  margin-right: 10px;
+  
+}
+.thunderCoIcon{
+  position: absolute;
+  cursor: pointer;
+}
+
+.comment_content :first-child{
+  font-size: 15px;
+  color: blueviolet;
+}
+
+.coUpdate_btn1{
+  margin-left: 30px;
+  font-size: 14px;
+  color: rgba(73, 88, 80, 0.74);
+  cursor: pointer;
+}
+.coUpdate_btn2{
+  margin-left: 10px;
+  font-size: 14px;
+  color: rgba(73, 88, 80, 0.74);
+  cursor: pointer;
+}

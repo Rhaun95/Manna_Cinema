@@ -1,0 +1,33 @@
+.userlist_box{  
+  justify-content: end;
+  margin-left: 70vh;
+  width: 1em;    
+}
+.userlist{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  background : rgb(158, 230, 200);
+  width: 300px;
+}
+.userlist_title{
+  width: 250px;
+  color: black;
+  padding: 15px;
+  font-size: 25px;
+  border-bottom: 1px solid black;
+}
+.joinedUser_info{
+  display: flex;
+  align-items: center;
+  color: black;
+}
+
+.joinedUser_info > div{
+  margin: 10px 0px;
+}
+
+.joinedUser_info >div> img{
+  margin-right: 10px;
+}

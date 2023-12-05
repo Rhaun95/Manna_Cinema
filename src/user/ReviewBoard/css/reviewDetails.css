@@ -1,0 +1,215 @@
+.reviewDetails_container222{
+    width: 100%;
+    height: fit-content;
+    background-color: #282c34;
+    color: rgb(255, 255, 255);
+    padding-top: 1px;
+    font-family: Arial, Helvetica, sans-serif;
+   
+    /* margin-bottom: 30px; */
+  
+}
+.reviewDetails_wrap5040{
+    width: 1100px;
+    /* height: fit-content;/ */
+    background-color: #282c34;
+    color: rgb(255, 255, 255);
+    padding-top: 1px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 40px auto;
+    
+}
+
+    .boardDetails_wrap222 {
+        width: 1000px;
+        /* margin: 100px auto; */
+    }
+    
+    .container_comment_board{
+        border-top: 1px solid wheat;
+        padding: 8px;
+        border-bottom: 1px solid wheat;
+        height: 100px;
+    }
+   
+    
+    .reviewDetails_title_box{
+        font-size: 2rem;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        margin-bottom: 10px;
+    }
+
+    .reviewDetails_title{
+        font-size: 1.5rem;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        margin-bottom: 20px;
+    }
+    
+    .reviewDetails_info{
+        display: flex;
+        justify-content: space-around;
+        
+        border-top: 1px solid rgb(255, 246, 246);
+        padding-top: 12px;
+        margin-bottom: 20px;
+        font-size: 18px;
+        font-weight: 600;
+    
+    }
+    
+    .reviewDetails_num{
+        display: flex;
+    
+    }
+    .boardDetails_num:nth-child(1){
+        margin-right: 20px;
+    }
+    
+    .reviewDetail_cont {
+        display: flex;
+
+        /* align-items: center;
+        justify-content: center; */
+        /* margin: 20px 0; */
+        height: 320px;
+        padding: 15px;
+        border-bottom: 1px solid rgb(255, 246, 246);
+        border-top: 1px solid rgb(255, 246, 246);
+        font-size: 1.2rem;
+        background-color: rgb(222, 228, 228);
+        color: black;
+    }
+    
+    
+    .boardDetails_bt_wrap {
+        margin-top: 30px;
+        text-align: center;
+        font-size: 0;
+    }
+    
+    .details_update {
+        display: inline-block;
+        min-width: 80px;
+        min-height: 30px;
+        margin-left: 15px;
+        padding: 8px;
+        border: 1px solid #000;
+        border-radius: 4px;
+        font-size: 1.1rem;
+        text-align: center;
+    }
+    .details_delete {
+        display: inline-block;
+        min-width: 80px;
+        min-height: 30px;
+        margin-left: 15px;
+        padding: 8px;
+        border: 1px solid #000;
+        border-radius: 4px;
+        font-size: 1.1rem;
+        text-align: center;
+        background: gray;
+        color: #fff;
+    }
+    
+    .details_Home {
+        display: inline-block;
+        min-width: 80px;
+        min-height: 30px;
+        margin-left: 15px;
+        padding: 8px;
+        border: 1px solid #000;
+        border-radius: 4px;
+        font-size: 1.1rem;
+        text-align: center;
+    }
+    
+.boardDetails_move_page{
+    display: flex;
+    flex-direction: row;
+}
+.boardDetails_container{
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 30px;
+}
+
+.boardDetails_tilte2{
+    font-size: 2rem;
+}
+
+.boardDetails_info{
+    display: flex;
+    justify-content: space-around;
+}
+
+.boardDetails_num{
+    display: flex;
+
+}
+.boardDetails_num:nth-child(1){
+    margin-right: 20px;
+}
+
+
+.boardDetails_cont {
+    padding: 15px;
+    border-bottom: 1px solid #000;
+    /* font-size: 1.4rem; */
+}
+
+
+
+.boardDetails_bt_wrap {
+    margin-top: 30px;
+    text-align: center;
+    font-size: 0;
+}
+
+.details_update {
+    display: inline-block;
+    min-width: 80px;
+    min-height: 30px;
+    margin-left: 15px;
+    padding: 8px;
+    border: 1px solid #000;
+    border-radius: 4px;
+    font-size: 1.1rem;
+    text-align: center;
+}
+.details_delete {
+    display: inline-block;
+    min-width: 80px;
+    min-height: 30px;
+    margin-left: 15px;
+    padding: 8px;
+    border: 1px solid #000;
+    border-radius: 4px;
+    font-size: 1.1rem;
+    text-align: center;
+    background: gray;
+    color: #fff;
+}
+
+.details_Home {
+    display: inline-block;
+    min-width: 80px;
+    min-height: 30px;
+    margin-left: 15px;
+    padding: 8px;
+    border: 1px solid #000;
+    border-radius: 4px;
+    font-size: 1.1rem;
+    text-align: center;
+}
+
+
+.boardDetails_move_page{
+    display: flex;
+    flex-direction: row;
+}
+

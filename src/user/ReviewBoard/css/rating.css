@@ -1,0 +1,23 @@
+.rating{
+    font-family: "Helvetica Neue", helvetica, arial, sans-serif;
+    text-align: center;
+}
+
+.star {
+    cursor: pointer;
+    transition: color 200ms;
+}
+
+.stars {
+    display: none;
+}
+
+.rating_container{
+    padding-bottom: 20px;
+}
+
+.only_rating{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}

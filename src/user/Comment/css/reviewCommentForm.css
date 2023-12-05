@@ -1,0 +1,35 @@
+.commentForm_all{
+    border: 1px solid #777777;
+    border-radius: 10px;
+    padding-left: 20px;
+    padding-top:5px;
+}
+.commentForm_user_id{
+    display: flex;
+    align-items: flex-start;
+    margin-bottom:10px;
+}
+.commentForm_content{
+    border:none;
+    outline: none;
+    color: #777777;
+    display: flex;
+    align-items: flex-start;
+    width: 98%;
+    resize:none;
+}
+.register_button{
+    display: flex;
+
+}
+.register_comment{
+    display: flex;
+    justify-content: end;
+}
+.register_comment2{
+    margin: 10px 20px;
+    padding: 2px 8px;
+}
+.register_comment2:hover{
+    background-color: rgb(79, 128, 111);
+}

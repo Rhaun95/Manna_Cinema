@@ -1,0 +1,99 @@
+ * {
+    margin: 0;
+    padding: 0;
+    /* text-align: justify; */
+}
+.thunderinsert_all{
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    color: black;
+}
+ .thunderinsert {
+    width: 950px;
+    height: 900px;
+    margin-top: 80px;
+    
+}
+.thunerinsert_headers{
+    color: aliceblue;
+    font-size: 18px;
+}
+.thunerinsert_headers1{
+    font-size: 40px;
+    color: aliceblue;
+}
+
+
+.thunderinsert_main{
+    display: flex;
+    margin: 20px;
+ 
+}
+
+.thunderinsert_imagebox{
+    width: 400px;
+    height: 350px;
+    overflow: auto;
+}
+
+.thunderinsert_image{
+    width: 110px;
+    height: 130px;
+    margin: 20px;
+    cursor: pointer;
+   
+}
+.thunderinsert_write {
+    border-top: 3px solid #000;
+  
+}
+.thunderinsert_write_wrap{
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+    border-bottom: 3px solid #000;
+}
+
+.thunderInsert_bottom{
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+
+    margin-top: 20px;
+    padding: 20px;
+    border-top: 3px solid #000;
+}
+
+.bottom_btn1{
+    width: 90px;
+    padding: 10px;
+    margin: 10px;
+}
+
+.thunderInsert_map{
+    margin-top: 138px;
+    margin-left: 30px;
+}
+.thunderInsert_bottom_box{
+    display: flex;
+}
+.thunderInsert_bottom_box2{
+    display: flex;
+    flex-direction: column;
+}
+.thunderInsert_tags_box{
+    width: 350px;
+    height: 200px;
+    background:rgb(255, 255, 255) ;
+    border-radius: 3px;
+
+    overflow: auto;
+    padding: 10xp;
+}
+
+.thunderInsert_tags_box1{
+    width: 80px;
+    height: 40px;
+    margin: 25px 10px 0px 0px;
+}

@@ -1,0 +1,123 @@
+.class_contai{
+    display:flex;
+    flex-direction: column;
+    width: 100%;
+    height: 1400px;
+ 
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 50px;
+
+    background-color: black;
+
+}
+
+
+
+.seat_container{
+    display: flex;
+    flex-direction: column;
+
+    width: 700px;
+    height: 650px;
+
+    margin-right: auto;
+    margin-left: auto;
+    align-items: center;
+    justify-content: center;
+
+
+}
+.screen{
+    width: 500px;
+    height: 250px;
+
+    margin: 80px auto;
+    display: flex;    
+    align-self: center;
+  
+    background-color: #ffffff;
+    box-shadow: 0px 40px 75px rgba(167, 167, 167, 0.75);
+ 
+    transform: rotateX(-45deg);
+
+}
+.seat_explain_box{
+   display: flex;
+   flex-direction: row;
+   margin-top: 40px;
+   justify-content: center;
+   align-items: center;
+   width: 80%;
+}
+
+.seat_explain{
+    font-size: 15px;
+    width: 40px;    
+    height: 40px;
+    border-radius: 15px;
+    margin: 20px;
+
+}
+.seat_box{
+    width: 950px;
+    display: grid;
+    padding: 50px;
+    grid-template-rows: 80px 80px 160px;
+    grid-template-columns:  80px 80px 100px 80px 80px 80px 100px 80px 80px 80px;
+    /* background-color: rgb(5, 5, 5); */
+}
+
+
+
+.seat_btn{
+    margin : 5px;
+    padding: 30px;
+    position: relative;
+
+    width: 65px;    
+    height: 65px;
+
+    border: 0;
+    border-radius: 15px;
+    border-top: 1px solid #b7b7b7; 
+    border-bottom: 1px solid #b7b7b7;
+
+    background-image: url(/src/user/basket/icons/armchair.png);
+    background-size: 68px 77px;
+    background-position: 40% 40% ;
+
+    transition: 0.2s all ease-in-out;
+    transform: rotate(180deg);
+   
+    /* background-color: transparent; */
+
+}
+
+.seat_btn:hover {
+   background-color: rgba(235, 79, 79, 0.781);
+   background-image: none;
+   bottom: 10px;
+
+
+    /* background-size: 68px 77px;
+    background-position: 40% 0%; */
+  }
+
+.seat_text{
+    color: white;
+    position: absolute;     
+    top: 28%;  
+    left: 28%;  
+    transform: translate( -50%, -50%); 
+    transform: rotate(180deg);
+    font-size: 20px;
+}
+
+.btn_basket{
+
+    width: 60%;
+    height: 40px;
+    margin: 100px auto 20px auto;
+
+}

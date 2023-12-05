@@ -1,0 +1,24 @@
+
+.thunderAdmin_all{
+  height: 150vh;
+}
+
+
+.thunderAdmin_select{
+  margin: 30px;
+}
+.thunderAdmin_btn{
+  width: 200px;
+  height: 80px;
+  border-radius: 10px;
+  margin: 10px;
+
+  font-size: 40px;
+  color: whitesmoke;
+  background-color: brown;
+  
+}
+
+.container-fluid22{
+  width: 900px;
+}

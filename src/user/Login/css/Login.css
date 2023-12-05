@@ -1,0 +1,16 @@
+.loginForm{
+    padding : 5px;
+    background-color: rgb(33, 37, 41);    
+    background-position: center center;
+    width : 34em;
+    height : 3.5em;
+  }
+  
+  .loginSucess{
+    padding : 5px;
+    background-color: rgb(33, 37, 41);                 
+    background-position: center center;
+    width : 34em;
+    height : 3.5em;
+  }
+  

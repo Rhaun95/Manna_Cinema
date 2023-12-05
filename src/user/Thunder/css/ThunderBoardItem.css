@@ -1,0 +1,57 @@
+.thunderBoardItem{
+  /* 자식들 양 끝으로 */
+  display: flex;
+  justify-content: space-between;
+   /* 자식들 vertical 중간으로*/
+  align-items: center;
+
+  width: 510px;
+  height: 70px;
+  
+  border-bottom: 2px solid rgb(115, 115, 163);
+  border-radius: 5px;
+  padding: 20px 0px 30px 10px;
+  margin: 20px 0px 10px 10px;
+
+  color:black;
+  cursor: pointer;
+}
+.boardItem_content{
+  display: flex;
+  align-items: center;
+
+  width: 300px;
+  
+  font-size: 18px;
+}
+.imgbox{
+  width: fit-content;
+  margin: 0px;
+  padding: 0px;
+}
+.sub_content{
+  display: flex;
+  flex-direction: column;
+  align-items: baseline;
+  margin-left: 20px;
+}
+
+.boardItem_btn{
+  width: 130px;
+  height: 50px;
+
+  display: inline-block;
+  padding: 10px 25px;
+
+  color: #fff;
+  background:#a4b9ff ;
+
+  border: 2px solid rgb(115, 115, 163);
+  border-radius: 5px;
+
+  cursor: pointer;
+}
+
+.boardItem_btn:hover{
+  background: #587bec;
+}

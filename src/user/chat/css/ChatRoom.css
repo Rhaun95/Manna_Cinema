@@ -1,0 +1,16 @@
+.chatRoomOut{
+    border-radius : 15px;
+    border : yellow 4px solid;
+    background-color : skyblue;
+    margin : 0 10em 0 10em;
+    
+}
+
+.chatRoomOut #FC{
+   height : 15vh;
+   border-radius: 15px;
+}
+
+.cont{
+    
+}

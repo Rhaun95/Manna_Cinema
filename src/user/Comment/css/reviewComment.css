@@ -1,0 +1,112 @@
+/* Comment.js */
+.container_comment_board{
+  display: flex;
+  flex-direction: column;
+}
+
+.comment_box_board{
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 20px;
+}
+.comment_content_board{
+ margin-right:200px;
+}
+
+
+/* ReviewComment.js */
+.reviewColumn_container {
+  display: flex;
+  flex-direction: row;
+  padding-bottom: 30px;
+}
+.commentComment {
+  margin-right: 30px;
+  font-weight: bold;
+  font-size: 18px;
+}
+.comment_register {
+  margin-right: 18px;
+  font-size: 15px;
+  border-bottom: 1px solid;
+}
+
+
+
+.content_bookMark{
+
+}
+.comment_latest{
+  margin-right:10px;
+  font-size: 15px;
+  border-bottom: 1px solid
+}
+.reviewComment_allAll{
+  margin-bottom:40px;
+
+}
+.reviewComment_map_all {
+  display: flex;
+  flex-direction: column;
+  width: 1100px;
+}
+
+
+
+.commentForm_all50{
+  border: 1px solid whitesmoke;
+  padding: 10px 25px;
+  border-radius: 15px;
+}
+
+.commentForm_content50{
+  display: flex;
+  width: 1030px;
+  margin-right: 30px;
+}
+.register_button50{
+ padding: 5px 15px;
+ margin: 12px 0px;
+ border-radius: 10px;
+  
+  
+}
+
+
+.comment_latest {
+  margin-right: 10px;
+  font-size: 15px;
+  border-bottom: 1px solid;
+}
+.reviewComment_allAll {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 40px;
+}
+.reviewComment_map_all {
+  display: flex;
+  flex-direction: column;
+  width: 1100px;
+}
+
+.ReviewComment_button_all {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.deleteReviewComment_button {
+  margin-right: 15px;
+  padding: 1.5px;
+  border-radius: 10px;
+}
+.updateReviewComment_button {
+  padding: 1.5px;
+  border-radius: 10px;
+}
+.realData_bookMark {
+  display: inline-block;
+  margin: 0px;
+}
+.user_id_bookMark {
+  margin: 0;
+}

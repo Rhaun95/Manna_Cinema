@@ -1,0 +1,12 @@
+.kakao_logo{
+ background-image: url(/src/user/basket/icons/katalk.png); 
+ background-size: 70px 70px;
+ background-repeat: no-repeat;
+ background-position: 25% 25% ;
+
+ border-radius: 15%;
+ width: 60px;
+ height: 60px;
+
+ padding: none;
+}

@@ -1,0 +1,19 @@
+.footerDiv{
+    background-color : rgb(37, 37, 37);
+    display  :grid;
+    margin : '1.5em 2em 1em 4em';
+}
+
+.footerText{    
+    text-align : left; 
+    margin : 1em 1em 0 20em;
+    display : grid;
+    color : gray;
+}
+
+.footerLogo{
+    height: 11vh;
+    left : 1;
+    right : 0;
+    margin-top: -6em;
+}

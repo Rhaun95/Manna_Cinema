@@ -1,0 +1,38 @@
+.lockboard_container_all{
+    height: 100vh;
+    background-color: #282c34;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.lockboard_container_all2{
+    position: relative;
+    top:-15%;
+    background-color: rgb(111, 111, 155);
+    padding: 40px;
+}
+
+.lock_pw{
+    font-size: 30px;
+}
+
+.lock_notice{
+    font-size: 50px;
+}
+.lock_Button1{
+    padding:6px 8px;
+    margin-right: 10px;
+}
+
+.lock_Button2{
+    padding: 6px 8px;
+    
+}
+.bt_lock{
+    display: flex;
+    justify-content: flex-end;
+}
+.lockBoard_pw{
+    width: 250px;
+    height: 40px;
+}

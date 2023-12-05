@@ -1,0 +1,40 @@
+.adminStoreText{
+    display : inline-block;
+    margin : 0.3em;
+    color : white;
+    width : 26.9em;
+}
+
+.adminStoreBox{
+    background: linear-gradient(135deg, #00acea 15%,#05003a 100%);   
+    margin : 1em;                          
+}
+.adminStoreList{
+    width : 43.3vh;
+    display : inline-block;
+}
+
+.adminStoreName{
+    display: inline-block;
+    margin : 0.3em;
+}
+
+.noScrollPage {
+    height: 92vh;
+}
+
+.ML_4em{
+    margin-left: 4em;
+}
+
+.checkSize{
+    height : 28px;
+    width :28px;
+    margin-left : -1em;
+}
+
+.adminStoreList:hover div {     
+    color: white;
+    text-shadow: 0 0 .1em, 0 0 .15em; 
+}
+

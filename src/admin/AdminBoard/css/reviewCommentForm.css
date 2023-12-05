@@ -1,0 +1,23 @@
+.commentForm_all {
+  border: 1px solid #777777;
+  border-radius: 10px;
+  padding-left: 20px;
+  paddin-top: 5px;
+}
+.commentForm_user_id {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 10px;
+}
+.commentForm_content {
+  border: none;
+  outline: none;
+  color: #777777;
+  display: flex;
+  align-items: flex-start;
+  width: 100%;
+  resize: none;
+}
+.register_button {
+  display: flex;
+}

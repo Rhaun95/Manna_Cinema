@@ -1,0 +1,52 @@
+.toast-alert1 {
+  position: fixed;
+  align-items: center;
+  justify-content: center;
+  /* icon 속성 */
+   background-color: rgba(134, 230, 130, 0.897);
+  /* background-image: url('/src/icons/bell.png'); */
+  background-size: 30px 30px;
+  background-repeat: no-repeat;
+  background-position: 50% 10%; 
+
+  border: 1px solid rgb(236, 227, 224);
+  border-radius: 10px;
+  box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 15%);
+  width: 270px;
+  height: 50px;
+  padding: 5px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: rgb(24, 23, 23);
+  margin-left: 100px;
+}
+
+.toast-alert p {
+  margin: 0;
+}
+
+@keyframes slideIn1 {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0%);
+  }
+}
+
+@keyframes slideOut1 {
+  from {
+    transform: translateX(0%);
+  }
+  to {
+    transform: translateX(-300%);
+  }
+}
+
+.openAnimation {
+  animation: slideIn1 0.3s ease-in-out 0s 1 normal forwards;
+}
+
+.closeAnimation {
+  animation: slideOut1 0.3s ease-in-out 0s 1 normal forwards;
+}

@@ -1,0 +1,25 @@
+.tableCustom{    
+    margin: auto;
+    width: 130vh;  
+    margin-bottom: 2em;  
+}
+
+.MCTitle{
+    margin-top: 1em;
+    margin-bottom: 2em;    
+    color:rgb(1, 243, 42);;
+}
+.thRow th{
+    color : rgb(1, 243, 42);;
+}
+
+.tbRow td{
+    width: auto;  
+}
+.tbRow #td2{
+    width: 10em;
+  }
+
+.diThRow th{
+    color : pink;    
+}

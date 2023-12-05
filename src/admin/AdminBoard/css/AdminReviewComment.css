@@ -1,0 +1,33 @@
+
+.reviewColumn_container{
+    display: flex;
+    flex-direction: row;
+    padding-bottom: 30px;
+}
+.commentComment{
+    margin-right:30px;
+    font-weight:bold;
+    font-size: 18px;
+}
+.comment_register{
+    margin-right:18px;
+    font-size: 15px;
+    border-bottom: 1px solid
+}
+.content_bookMark{
+
+}
+.comment_latest{
+    margin-right:10px;
+    font-size: 15px;
+    border-bottom: 1px solid
+}
+.reviewComment_allAll{
+    margin-bottom:40px;
+
+}
+.reviewComment_map_all {
+    display: flex;
+    flex-direction: column;
+    width: 1100px;
+}

@@ -1,0 +1,210 @@
+.thunderDetail_all{
+
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  color: black;
+  background-color: rgb(251, 254, 255);
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: fit-content;
+  padding-bottom: 50px;
+  
+
+} 
+.thunderDetail_all2{
+  position:relative;
+  top: 30px;
+
+}
+
+.topHandler{
+    width: 1000px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    margin: 20px auto;
+    padding: 0px;
+    font-size: 35px;
+}
+.topHandler_sub1{
+  border-top: 1px solid gray;
+  border-bottom: 1px solid gray;
+  width: 500px;
+  padding: 10px;
+  margin: 45px;
+
+}
+.topHandler_sub1:hover{
+  background-color: #d16145;
+}
+.topHandler_sub2{
+  display: flex;
+  height: 70px;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.thunderDetail_top{
+  display: flex;
+  flex-direction: column;
+  width: 1000px;
+  margin: auto;
+  /* margin-top: 350px; */
+}
+
+.thunderDetail_top1{
+  display: flex;
+  justify-content: space-between;
+  
+  margin: 35px 30px 0px 30px;
+  align-items: flex-start;
+  font-size: 20px;
+  font-weight: 700;
+  font-family: 'Jeju Gothic', sans-serif;
+  color: rgb(63, 113, 189);
+
+  /* padding: 10px 30px 30px 30px; */
+}
+.thunderDetail_top1 :nth-child(2){
+  align-self: flex-end;
+  font-size: 13px;
+  font-family: 'Jeju Gothic', sans-serif;
+  color:  rgba(63, 113, 189, 0.829);
+}
+
+.thunderDetail {
+  display: flex;
+  flex-direction: column;
+  height: fit-content;
+
+  margin: 10px 0px;
+  padding: 10px 30px;;
+
+  font-size: 18px;
+  font-family: 'Hanna', sans-serif;
+  font-weight: 600;
+
+  border-top: 3px solid rgb(199, 158, 158);
+  border-bottom: 2px solid rgba(240, 198, 198, 0.815);
+  
+}
+
+.thunderDetail_content{
+  margin: 50px;
+  font-size: 17px;
+  white-space:pre-wrap;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+
+.thunderdetail_detail{
+  padding: 10px;
+  margin-bottom: 20px;
+}
+.thunderdetail_detail_detail{
+  display: flex;
+  align-items: center;
+
+  font-size: 13px;
+  
+}
+.thunderdetail_detail_detail{
+  margin-bottom: 5px;
+}
+
+.thunderDetailregdate{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  
+  font-size: 13px;
+  color: rgba(83, 83, 83, 0.842);
+
+}
+
+.thudnerDetail_tagbox{
+ display: flex;
+}
+
+.thunderCoIcon_box1{
+  position: relative;
+}
+
+.thunderCoIcon1{
+  position: absolute;
+  bottom: 1px;
+  right: 0.1px;
+
+  cursor: pointer;
+}
+
+.thunderDetail_bottom{
+  border-bottom: 2px solid rgba(240, 198, 198, 0.815);
+}
+
+.detail_join_btn{
+  width:1000px;
+  height: 40px;
+
+  color: rgb(236, 250, 252);
+  background: rgba(200, 201, 245, 0.822);
+
+  padding: 6px 6px;
+  margin: 0px 5px 10px 5px;
+  border: 1px solid #d6c3e7a1;
+  border-radius: 5px;
+  cursor: pointer;
+  
+  font-size: 18px;
+  font-weight: 600;
+
+}
+.detail_join_btn:hover{
+  background: #398581;
+}
+
+
+.addComment{
+  position: relative;
+  
+  width: 930px;
+  height: 50px;
+  margin: 10px;
+}
+.addComment_btn{
+  font-size: 18px;
+  font-family: 'Jeju Gothic', sans-serif;
+  
+  width: 70px;
+  height: 50px;
+  padding: 0 10px;
+  border: 1px solid rgba(128, 128, 128, 0.534);
+  border-radius: 10px;
+}
+
+
+
+.thunderDetail_content2{
+  border-top: 3px solid rgba(240, 198, 198, 0.815);
+  border-bottom: 2px solid rgba(240, 198, 198, 0.815);
+  margin: 10px;
+}
+.userlist2{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+.joinedUser_info2{
+  /* width: 800px; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+
+  color: black;
+  border-bottom: 1px solid rgba(184, 184, 184, 0.301);
+
+  padding: 15px;
+}

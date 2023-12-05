@@ -1,0 +1,52 @@
+.chatRoom {     
+    background-color: skyblue;    
+  }
+
+.chatRoom #userId{
+  float : left;
+  color : black;
+}
+
+.chatRoom #timeMe{
+    float : right;
+    color : black;
+}
+
+.chatRoom #timeUser{
+  float : left;
+  color : black;
+}
+
+.chatArea{
+  width : 100vh;
+  height : 1vh;
+  display : inline-block;
+  margin : 1em
+}
+
+.chatUser{
+  background-color : white;
+  color : black;
+  float : left;
+  border-radius : 15px;
+  margin-left : 0.2em;
+}
+
+.chatUser span{
+  float : left;
+  margin : 0.5em;
+}
+
+
+.chatMe{
+  background-color : yellow;
+  color : black;
+  float : right;
+  border-radius : 15px;
+  margin-left : 0.2em;
+}
+
+.chatMe span{
+  float : right;
+  margin : 0.5em;
+}

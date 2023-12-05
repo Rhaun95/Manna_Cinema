@@ -1,0 +1,17 @@
+.setting_container{
+  width: 100px;
+  height: 180px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.checkbx{
+  width: 40px;
+  height: 40px;
+}
+.btnDelete{
+  width:40px;
+  height:40px;
+}

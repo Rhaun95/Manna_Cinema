@@ -1,0 +1,47 @@
+.all_conconcon{
+    width: 100%;
+    height: 100vh;
+    background:  #f6f9ff;
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.reviewBoardForm_write5040{
+    border:3px solid antiquewhite;
+    padding: 30px 0;
+    color: black;
+    background-color: antiquewhite;
+    
+}
+
+.boardForm_wrap{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+.boardForm_name{
+    font-size: 40px;
+}
+.boardForm_title_sub{
+    display: flex;
+    justify-content: center;
+}
+.boardForm_info1{
+    display: flex;
+}
+.boardForm_info2{
+    display: inline;
+}
+.boardForm_pw{
+    display: flex;
+    margin-left: 200px;
+}
+.boardForm_button{
+    margin-top: 10px;
+}
+.boardForm_reg{
+    margin-right: 10px;
+    padding: 2px 12px;
+}

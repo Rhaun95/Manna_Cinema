@@ -1,0 +1,11 @@
+.textAlignLeft{
+  text-align: left;  
+}
+
+.fontColor{
+  color: black;
+}
+
+.task-borders{
+  border-left: 3px solid #f66436;
+}

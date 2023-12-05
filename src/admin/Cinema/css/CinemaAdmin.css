@@ -1,0 +1,47 @@
+.adminCinemaText{
+    display : inline-block;
+    margin : 0.3em;
+    color : white;
+    width : 26.9em;
+}
+
+.adminCinemaList{
+    width : 55vh;
+    display : inline-block;
+}
+
+.adminCinemaName{
+    display: inline-block;
+    margin : 0.3em;
+}
+
+.noScrollPage {
+    height: 92vh;
+}
+
+.ML_4em{
+    margin-left: 4em;
+}
+
+.checkSize{
+    height : 28px;
+    width :28px;
+    margin-left : -1em;
+}
+
+.adminCinemaBox{
+    background: linear-gradient(135deg, #5aea00 15%,#123a00 100%);
+    margin : 1em;                          
+}
+
+.adminCinemaList:hover div {     
+    color: black;
+    text-shadow: 0 0 .1em, 0 0 .15em; 
+}
+
+.adminCinemaText{
+    display : inline-block;
+    margin : 0.3em;
+    color : white;
+    width : 26.9em;
+}

@@ -1,0 +1,42 @@
+/* .detailInfo{
+    display: flex;;
+    color: pink;  
+    margin-left: 1.2em;
+  }
+
+.storeImage{  
+
+    width: 500px; 
+    margin : 0.8em;
+    border : 10px solid gray;
+}
+
+.cardImage {
+    height : 20vh;
+    width: 35vh; 
+}
+
+.store_temp_conatiner{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+
+}
+.home_cardStore{
+    width: 18rem;
+    height : 450px;
+    font-size: 25px;
+    margin: 20px;
+}
+
+.home_cardStore div{  
+    transition: all 0.3s linear;	
+  }
+  
+  
+.home_cardStore:hover #card{
+      background: linear-gradient(135deg, #00acea 15%,#05003a 100%);   
+      transform:scale(1.125);    
+      color : rgb(224, 248, 252);
+      text-shadow: 0 0 .1em, 0 0 .2em;
+  }
+   */

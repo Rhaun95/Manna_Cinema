@@ -1,0 +1,110 @@
+.board_container_main{
+    width: 100%;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    color: white;
+    background: #282c34;
+    padding-top:10px;
+    font-family:"Helvetica Neue", helvetica, arial, sans-serif;
+}
+/**
+크기 줄이기
+ */
+.board_wrap_all {
+    display: flex;
+    flex-direction: column;
+    width: 1100px;
+}
+
+
+.board_title_all {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 30px;
+}
+
+
+.board_title1 {
+    font-size:30px;
+    font-weight:bold;
+}
+
+
+.board_title2 {
+    font-size:20px;
+
+}
+
+.board_top_all {
+    display: flex;
+    flex-direction: row;
+    font-weight: bold;    /*원래는 700*/
+    padding:10px;
+    background-color:#777777;
+}
+
+
+.board_map_all :nth-child(2){
+    text-align: left;
+}
+
+
+.board_map_all {
+    display: flex;
+    flex-direction: row;
+    padding: 10px 0;
+    text-align: center;
+    font-size: 1.1rem;
+    border-bottom: 1px solid #adb5bd;
+    padding:10px;
+
+}
+
+/*각 칼럼들*/
+.type_board {
+    width: 15%;
+    text-align: center;
+}
+.title_board{
+    width: 40%;
+    text-align: center;
+    padding-left: 5px;
+}
+.user_id_board {
+    width: 15%;
+    text-align: center;
+}
+.regDate_board {
+    width: 20%;
+    text-align: center;
+}
+ .hit_board {
+    width: 10%;
+   text-align: center;
+}
+
+.title_bookMark5040{
+    width: 365px;
+    margin-left: 20px;
+}
+.hit_board5040{
+    margin-right: 50px;
+    width: 60px;
+}
+
+ /*글쓰기버튼*/
+
+.writeBoard_all {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 20px;
+}
+
+/*페이지네이션*/
+.page-link{
+    position: relative;
+    bottom:30px;
+    margin-top : 30px;
+}

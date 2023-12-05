@@ -1,0 +1,109 @@
+.basket_container_title{
+    display: flex;
+    align-self: baseline;
+    font-size: 50px;
+    margin: 50px 0px 30px;
+    color: whitesmoke;
+}
+.basket_container{
+
+    height: 450px;
+    overflow: auto;
+    background-color: whitesmoke;
+
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+}
+
+/*#스크롤바 전체*/
+.basket_container::-webkit-scrollbar {
+    width: 13px;
+}
+
+/*#스크롤 막대*/
+.basket_container::-webkit-scrollbar-thumb {
+    background-color: #2f3542;
+    border-radius: 10px;
+    background-clip: padding-box;
+    border: 2px solid transparent;
+}
+
+/*#스크롤 막대 외부*/
+.basket_container::-webkit-scrollbar-track {
+    background-color: grey;
+    border-radius: 10px;
+    box-shadow: inset 0px 0px 5px white;
+}
+.total{
+    font-size: 10px;
+}
+.movieItem{
+    display: flex;
+
+    width: 93%;
+    height: 250px;
+    
+
+    margin:auto;
+    padding: 30px 0px;
+    /* margin: 50px 0px 0px 30px;
+    padding:0px; */
+
+    border-bottom: 2px solid rgb(115, 115, 163);
+    border-radius: 6px;
+    color: midnightblue;
+    
+}
+
+.basket_details{
+    width: 70%;
+}
+
+.details{
+    font-size: 25px;
+    text-align: left;
+    margin-left: 20px;
+}
+
+/* .basket_container_bottom_box{
+    display: flex;
+} */
+.basket_container_bottom{
+    display:flex;
+
+}
+.movie_poster{
+    margin-right: 20px;
+}
+
+
+.basket_container_bottom_box{
+    display: flex;
+    justify-content: flex-end;
+   
+}
+.basket_container_bottom{
+    display: flex;
+    margin: 30px;
+}
+.basket_container_price{
+    display: flex;
+    margin-top: 20px;
+}
+.basket_container_btn_payment{
+
+    width: 250px;
+    height: 60px;
+    margin-left: 30px;
+    background-color: rgb(47, 255, 175);
+    border: 1px solid whitesmoke;
+    border-radius: 10px;
+    font-size: 40px;
+}
+.baske_btn_payment_total{
+    display: flex;
+    font-size: 40px;
+    color:whitesmoke;
+    height: 60px;
+}

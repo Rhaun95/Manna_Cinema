@@ -1,0 +1,16 @@
+.header{
+    z-index: 2; /*header 항상 위로 보이게*/
+    position : fixed;
+    top : 0;
+    left : 0;
+    right : 0;  
+    height: 8vh;
+  }
+  
+  .headerItem{
+    position: relative;
+    top : 0;
+    left : 0;
+    right : 0;
+    height: 5%;
+  }

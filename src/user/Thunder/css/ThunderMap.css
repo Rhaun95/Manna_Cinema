@@ -1,0 +1,105 @@
+
+.thunderMap_container{
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+}
+
+.thunderMapBoard_container{
+  width: 600px;
+  height: 500px;
+
+  margin: 80px 60px;
+  padding: 30px;
+  overflow: auto;
+
+  border-radius: 10px;
+  background: #fffefe;
+
+}
+/*#스크롤바 전체*/
+.thunderMapBoard_container::-webkit-scrollbar {
+  width: 13px;
+  
+}
+
+/*#스크롤 막대*/
+.thunderMapBoard_container::-webkit-scrollbar-thumb {
+  background-color: #c2ec9b;
+  border: 2px solid #a4b9ff;
+  /* background-color: #c2ec9b;
+  border: 2px solid #99b97a77; */
+  border-radius: 8px;
+  background-clip: padding-box;
+
+}
+
+/*#스크롤 막대 외부*/
+.thunderMapBoard_container::-webkit-scrollbar-track {
+  background-color: rgba(181, 181, 223, 0.658);
+  /* background-color: #99b97a77; */
+  border-radius: 8px;
+  box-shadow: inset 0px 0px 5px white;
+  
+}
+
+.toCard{
+  color: black;
+  padding: 5px 10px;
+  margin: 5px;
+}
+.mapcategoryselect{
+  padding: 8px;
+  color: black;
+}
+
+
+.thunderMapBoard_container_title{
+  width: 200px;
+  height: 60px;
+
+  padding: 10px;
+  background: #c4fc8f;
+  border-radius: 6px;
+  border: 1px solid  #b3e781;
+
+  text-align: center;
+  font-size: 30px;
+
+}
+
+.map_container{
+  width: fit-content;
+  margin: 38px;
+}
+
+.map_item{
+  width: 700px;
+  height: 500px;
+  padding: 30px;
+
+  border-radius: 10px; 
+}
+
+.marker_content{
+  display:flex;
+  
+  width: 350px;
+  height: 130px;
+  
+  padding:10px;
+  color:black;
+}
+.cinemaMarker_content{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  height: 30px;
+  margin-left: 30px;
+  color:black;
+}
+
+.cinemaMarker_content_info{
+ text-align: center; 
+ 
+}

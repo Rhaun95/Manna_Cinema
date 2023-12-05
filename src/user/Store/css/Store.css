@@ -1,0 +1,39 @@
+.detailInfo{
+    display: inline-block;
+    color: pink;  
+    margin-left: 1.2em;
+  }
+
+.storeImage{  
+    height : 40vh;
+    width: 40vh;
+    margin : 0.8em;
+    border : 5px solid #00acea;
+    box-shadow : 0 0 3em, 0 0 .13em;
+    border-radius: 15px;
+}
+
+.cardImage {
+    /* height : 30vh; */
+    /* width: 30vh; */
+}
+
+.cardStore{
+    width: 18.2rem;
+    display: inline-block;
+    margin : 1em;
+    padding : 1em;
+}
+
+.cardStore div{  
+    transition: all 0.3s linear;	
+  }
+  
+  
+.cardStore:hover #card{
+      background: linear-gradient(135deg, #00acea 15%,#05003a 100%);   
+      transform:scale(1.125);    
+      color : rgb(224, 248, 252);
+      text-shadow: 0 0 .1em, 0 0 .2em;  
+  }
+  

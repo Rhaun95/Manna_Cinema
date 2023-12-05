@@ -1,0 +1,45 @@
+.container_fluid33_all{
+  height: 1000px;
+  width: 100%;
+  
+  
+}
+
+.container-fluid32{
+  width: 800px;
+  margin-left: 100px;
+  margin-right: 40px;
+  height: fit-content;
+}
+/* 번개댓글모음 */
+.container-fluid33{
+  width: 900px;
+  margin-left: 600px;
+  margin-top: 60px;
+  height: 700px;
+}
+.container-fluid33_title{
+  font-size: 40px;
+  margin: 30px 0 20px 0;
+}
+
+.thunderAdmin_container{
+  display: flex;
+  margin-left: 450px;
+ 
+}
+
+.adminThunco_btn{
+  width: 70px;
+  height: 33px;
+}
+
+.adminThunco_btn:hover{
+  background-color: bisque;
+}
+.adminThunco_input{
+  width: 240px;
+  height: 30px;
+  padding-left: 10px;
+  margin-bottom: 10px;
+}
